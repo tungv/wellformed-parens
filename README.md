@@ -1,15 +1,42 @@
-# wellformed-parens
+# Problem
 
-To install dependencies:
+A sequence of well-formed parentheses is one in which every opening parenthesis has a corresponding closing parenthesis, the order is correct,
+and at no point does a closing parenthesis appear before its matching opening parenthesis in the sequence.
 
-```bash
-bun install
+## Definition and Properties
+A string of parentheses is well-formed if:
+
+- Every opening `(` is eventually matched by a closing `)`.
+- At any point when reading the string left to right, the number of `)` does not exceed the number of `(`.
+- All types of brackets (such as (), {}, []) must be properly stacked and closed in nested expressions.​
+- The string is balanced, meaning total number of ( equals total number of `)` and the nesting is proper.​
+
+## Examples of Well-Formed Parentheses
+
+### For one pair (n=1):
+
+```
+()
 ```
 
-To run:
+### For two pairs (n=2):
 
-```bash
-bun run 
+```
+(())
+
+()()
 ```
 
-This project was created using `bun init` in bun v1.3.0. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+### For three pairs (n=3):
+
+```
+((()))
+
+(()())
+
+(())()
+
+()(())
+
+()()()
+```
