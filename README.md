@@ -40,3 +40,12 @@ A string of parentheses is well-formed if:
 
 ()()()
 ```
+
+## Question:
+
+Given a number `n` (0 < n <= 1000), calculate the exact number of possible well formed parentheses consist of n pair (string length = 2n)
+
+Example:
+input: n=1 -> output: 1
+input: n=2 -> output: 2
+input: n=3 -> output: 5
